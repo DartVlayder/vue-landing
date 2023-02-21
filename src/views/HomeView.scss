@@ -254,6 +254,9 @@ h2 {
   }
 }
 @media (max-width: 425px) {
+  h2 {
+    width: 300px;
+  }
   .slider {
     padding-bottom: 30px;
     display: block;
