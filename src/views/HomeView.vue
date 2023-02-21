@@ -236,7 +236,7 @@ export default {
   methods: {
     close () {
       let openItem = this.items.find(item => item.open)
-      if (openItem !== undefined && openItem === true) {
+      if (openItem !== undefined) {
         openItem.open = false
       }
     },
