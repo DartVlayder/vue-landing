@@ -65,6 +65,9 @@
   h1, h2 {
     text-transform: uppercase;
   }
+  .marks__wrapper--img {
+    display: none;
+  }
   .separator {
     height: 4px;
     width: 184px;
@@ -257,6 +260,16 @@ h2 {
   h2 {
     width: 300px;
   }
+  .center{
+    margin-bottom: 59px;
+  }
+  .marks__wrapper--img{
+    display: block;
+    width: 121px;
+    position: absolute;
+    top: -61px;
+    right: 147px;
+  }
   .slider {
     padding-bottom: 30px;
     display: block;
@@ -314,6 +327,7 @@ h2 {
     align-items: center;
     position: relative;
     &__avatar {
+      display: none !important;
       position: relative;
       width: 100%;
       height: 100%;
@@ -330,7 +344,7 @@ h2 {
     &__col {
       border: 1px solid #00C368;
       border-radius: 20px;
-      padding: 10px;
+      padding: 20px;
       box-shadow: 0 4px 2px 0 #00C368;
     }
   }
@@ -338,6 +352,16 @@ h2 {
     display: none;
     &--bot {
       display: none;
+    }
+  }
+  .marks__wrapper {
+    display: flex;
+    justify-content: space-between;
+    &--left {
+      display: flex;
+    }
+    &--right {
+      display: flex;
     }
   }
   .marks__tel {
@@ -364,5 +388,15 @@ h2 {
   }
   .center {
     padding: 0 14px;
+  }
+}
+@media (max-width: 375px) {
+  .marks__wrapper--img{
+    right: 124px;
+  }
+}
+@media (max-width: 320px) {
+  .marks__wrapper--img{
+    right: 89px;
   }
 }

@@ -102,19 +102,7 @@
           <h2 class="center">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
           <div class="card__reviews__comp">
             <div class="card__reviews__comp__avatar">
-              <div class="marks__tel left-1">
-                <img src="../img/marks__op.svg" alt="icon" class="marks__img">
-              </div>
-              <div class="marks__tel left-2">
-                <img src="../img/marks__op.svg" alt="icon" class="marks__img">
-              </div>
               <img src="../img/avatar.svg" alt="avatar">
-              <div class="marks__tel left-3">
-                <img src="../img/marks__op.svg" alt="icon" class="marks__img">
-              </div>
-              <div class="marks__tel left-4">
-                <img src="../img/marks__op.svg" alt="icon" class="marks__img">
-              </div>
             </div>
             <div class="marks">
               <img src="../img/marks.svg" alt="icon" class="marks__img">
@@ -123,6 +111,27 @@
               <img src="../img/marks.svg" alt="icon" class="marks__img">
             </div>
             <div class="card__reviews__comp__col">
+              <div class="marks__wrapper">
+                <div class="marks__wrapper--img">
+                  <img src="../img/avatar.svg" alt="avatar">
+                </div>
+                <div class="marks__wrapper--right">
+                  <div class="marks__tel left-1">
+                    <img src="../img/marks__op.svg" alt="icon" class="marks__img">
+                  </div>
+                  <div class="marks__tel left-2">
+                    <img src="../img/marks__op.svg" alt="icon" class="marks__img">
+                  </div>
+                </div>
+                <div class="marks__wrapper--left">
+                  <div class="marks__tel left-3">
+                    <img src="../img/marks__op.svg" alt="icon" class="marks__img">
+                  </div>
+                  <div class="marks__tel left-4">
+                    <img src="../img/marks__op.svg" alt="icon" class="marks__img">
+                  </div>
+                </div>
+              </div>
               <div class="card__reviews__comp__text ">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam quas, aut consectetur
                 animi  autem aliquid consequuntur suscipit exercitationem laborum cupiditate magnam eaque quae deleniti, iste nisi
