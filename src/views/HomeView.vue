@@ -68,6 +68,33 @@
           </div>
         </div>
       </div>
+        <swiper
+          :slides-per-view="1"
+          :space-between="50"
+          @swiper="onSwiper"
+          @slideChange="onSlideChange"
+          class="slider swiper"
+          :modules="modules" 
+          :pagination="{ clickable: true }"
+          navigation
+        >
+          <swiper-slide class="slider__item slide">
+            <img src="../img/box.svg" alt="img">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+          </swiper-slide>
+          <swiper-slide class="slider__item slide">
+            <img src="../img/headphones.svg" alt="img">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+          </swiper-slide>
+          <swiper-slide class="slider__item slide">
+            <img src="../img/paperclip.svg" alt="img">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+          </swiper-slide>
+          <swiper-slide class="slider__item slide">
+            <img src="../img/laptop.svg" alt="img">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+          </swiper-slide>
+        </swiper>
     <div class="container">
       <section class="section__info">
         <div class="card__reviews">
@@ -75,10 +102,26 @@
           <h2 class="center">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
           <div class="card__reviews__comp">
             <div class="card__reviews__comp__avatar">
+              <div class="marks__tel left-1">
+                <img src="../img/marks__op.svg" alt="icon" class="marks__img">
+              </div>
+              <div class="marks__tel left-2">
+                <img src="../img/marks__op.svg" alt="icon" class="marks__img">
+              </div>
               <img src="../img/avatar.svg" alt="avatar">
+              <div class="marks__tel left-3">
+                <img src="../img/marks__op.svg" alt="icon" class="marks__img">
+              </div>
+              <div class="marks__tel left-4">
+                <img src="../img/marks__op.svg" alt="icon" class="marks__img">
+              </div>
             </div>
-            <div class="marks"></div>
-            <div class="marks"></div>
+            <div class="marks">
+              <img src="../img/marks.svg" alt="icon" class="marks__img">
+            </div>
+            <div class="marks">
+              <img src="../img/marks.svg" alt="icon" class="marks__img">
+            </div>
             <div class="card__reviews__comp__col">
               <div class="card__reviews__comp__text ">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam quas, aut consectetur
@@ -89,8 +132,12 @@
               <div class="card__reviews__comp__bot">
                 <span>Jane Does</span>
                 <div class="mark">
-                  <div class="marks--bot"></div>
-                  <div class="marks--bot"></div>
+                  <div class="marks--bot">
+                    <img src="../img/marks.svg" alt="icon" class="marks__img">
+                  </div>
+                <div class="marks--bot">
+                  <img src="../img/marks.svg" alt="icon" class="marks__img">
+                </div>
                 </div>
               </div>
             </div>
@@ -154,8 +201,29 @@
 
 <script>
 import AppAccordeon from '../components/AppAccordeon.vue'
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/css';
+import { defineComponent } from 'vue'
+import { Pagination } from 'swiper'
+import 'swiper/css/pagination'
+import { Navigation } from 'swiper'
+import 'swiper/css/navigation' 
 export default {
-  components: {AppAccordeon},
+  components: {AppAccordeon,Swiper,SwiperSlide},
+  url: import.meta.url,
+  setup() {
+    const onSwiper = (swiper) => {
+      console.log(swiper);
+    };
+    const onSlideChange = () => {
+      console.log('slide change');
+    };
+    return {
+      onSwiper,
+      onSlideChange,
+      modules: [Pagination, Navigation]
+    };
+  },
   methods: {
     close () {
       let openItem = this.items.find(item => item.open)
@@ -198,4 +266,15 @@ export default {
 </script>
 
 <style src="./HomeView.scss" lang="scss" scoped>
+  @import '@/styles/variables.scss';
+  @import '@/styles/mixins.scss';
+  @import './style.scss';
+
+  .swiper {
+    @include swiper-wrapper();
+  }
+
+  .slide {
+    @include swiper-slide();
+  }
 </style>

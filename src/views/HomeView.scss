@@ -197,19 +197,26 @@
 }
 .mark {
   display: flex;
+  &__tel {
+    display: none;
+  }
 }
 .marks {
   width: 99px;
   height: 30px;
-  background-image: url(../img//marks.svg);
   background-repeat: no-repeat;
+  &__img {
+    color: #00C368;
+  }
 }
 .marks--bot {   
   width: 9px;
   height: 12px;
-  background-image: url(../img//marks.svg);
   background-repeat: no-repeat;
   transform: rotate(180deg);
+  &__img {
+    color: #00C368;
+  }
 }
 h2 {
   width: 400px;
@@ -231,13 +238,47 @@ h2 {
     align-items: center;
   }
 }
-
+.slider {
+  display: none;
+}
+.marks__img {
+  display: none;
+}
 @media (max-width: 768px) {
   .menu__item {
       margin-right: 0px;
   }
+  h1 {
+    width: 500px;
+    text-align: center;
+  }
 }
 @media (max-width: 425px) {
+  .slider {
+    padding-bottom: 30px;
+    display: block;
+    &__list {
+      display: flex;
+    }
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      & img {
+        width: 60px;
+      }
+      & p {
+        width: 160px;
+        text-align: center;
+      }
+    }
+  }
+  .marks__img {
+    display: block;
+  }
+  h1 {
+    width: 300px;
+  }
   .header {
     justify-content: center;
     &__logo img {
@@ -267,5 +308,58 @@ h2 {
   }
   .card__reviews__comp {
     flex-direction: column;
+    align-items: center;
+    position: relative;
+    &__avatar {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    &__text{
+      align-items: center;
+    }
+    &__bot{
+      margin: 0 auto;
+    }
+    &__col {
+      border: 1px solid #00C368;
+      border-radius: 20px;
+      padding: 10px;
+      box-shadow: 0 4px 2px 0 #00C368;
+    }
+  }
+  .marks {
+    display: none;
+    &--bot {
+      display: none;
+    }
+  }
+  .marks__tel {
+    width: 30px;
+    height: 30px;
+    color: #E7EBF0;
+    background-repeat: no-repeat;
+  }
+  .marks__tel .marks__img {
+    width: 30px;
+    height: 30px;
+  }
+  .card__reviews__df {
+    flex-direction: column;
+  }
+  .card__reviews__comp--small {
+    flex-direction: row-reverse;
+    &__text {
+      padding: 10px;
+    }
+  }
+  .separator {
+    margin-top: 0px;
+  }
+  .center {
+    padding: 0 14px;
   }
 }
